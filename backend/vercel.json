@@ -2,15 +2,31 @@
   "version": 2,
   "builds": [
     {
-      "src": "./server.js",
+      "src": "fit-healthy-backend/server.js", 
       "use": "@vercel/node"
     }
   ],
 
   "routes": [
-  {
-    "src": "/(.*)",
-    "dest": "/"
-  }
+    {
+      "src": "/api/cursuri/(.*)",
+      "dest": "/fit-healthy-backend/api/cursuri/$1" 
+    },
+    {
+      "src": "/api/postari/(.*)",
+      "dest": "/fit-healthy-backend/api/postari/$1" 
+    },
+    {
+      "src": "/api/utilizatori/(.*)",
+      "dest": "/fit-healthy-backend/api/utilizatori/$1" 
+    },
+    {
+      "src": "/uploads/(.*)",
+      "dest": "/fit-healthy-backend/uploads/$1" 
+    },
+    {
+      "src": ".*",
+      "dest": "fit-healthy-backend/server.js" 
+    }
   ]
 }
