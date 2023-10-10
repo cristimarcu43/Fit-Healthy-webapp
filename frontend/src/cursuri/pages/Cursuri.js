@@ -20,7 +20,7 @@ const Cursuri = () => {
     const fetchCursuri = async () => {
       try {
         const responseData = await sendRequest(
-          process.env.REACT_APP_BACKEND_URL + `/cursuri`
+          process.env.REACT_APP_ASSET_URL + `/api/cursuri`
         );
 
         setLoadedCursuri(responseData.cursuri);

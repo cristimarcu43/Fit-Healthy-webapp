@@ -19,7 +19,7 @@ const PaginaCursSingle = (props) => {
   const getCurs = async () => {
     try {
       const res = await axios.get(
-        process.env.REACT_APP_BACKEND_URL + `/cursuri/` + id
+        process.env.REACT_APP_ASSET_URL + `/api/cursuri/` + id
       );
       setDescriere(res.data.curs.descriere);
       return res;
@@ -38,7 +38,7 @@ const PaginaCursSingle = (props) => {
   const salvareCurs = async () => {
     try {
       const res = await axios.patch(
-        process.env.REACT_APP_BACKEND_URL + `/cursuri/updatecurs`,
+        process.env.REACT_APP_ASSET_URL + `/api/cursuri/updatecurs`,
         {
           id: id,
           descriere: descriere,
@@ -60,7 +60,7 @@ const PaginaCursSingle = (props) => {
   const salveazaComm = async () => {
     try {
       const res = await axios.post(
-        process.env.REACT_APP_BACKEND_URL + `/cursuri/addcomment`,
+        process.env.REACT_APP_ASSET_URL + `/api/cursuri/addcomment`,
         {
           id: id,
           comentariu: newComm,
@@ -85,10 +85,13 @@ const PaginaCursSingle = (props) => {
 
       // Trimite array-ul actualizat către backend pentru actualizarea în baza de date
       axios
-        .post(process.env.REACT_APP_BACKEND_URL + `/cursuri/stergecomentarii`, {
-          cursId: id,
-          comentarii: comentariiActualizate,
-        })
+        .post(
+          process.env.REACT_APP_ASSET_URL + `/api/cursuri/stergecomentarii`,
+          {
+            cursId: id,
+            comentarii: comentariiActualizate,
+          }
+        )
         .then((res) => {
           if (res.status === 200) {
             toast.success("Comentariul a fost șters cu succes !");
@@ -109,7 +112,7 @@ const PaginaCursSingle = (props) => {
   const adaugaLike = async () => {
     try {
       const res = await axios.post(
-        process.env.REACT_APP_BACKEND_URL + `/cursuri/addlike`,
+        process.env.REACT_APP_ASSET_URL + `/api/cursuri/addlike`,
         {
           id: id,
           userId: userId,
@@ -124,7 +127,7 @@ const PaginaCursSingle = (props) => {
   const stergeLike = async () => {
     try {
       const res = await axios.post(
-        process.env.REACT_APP_BACKEND_URL + `/cursuri/deletelike`,
+        process.env.REACT_APP_ASSET_URL + `/api/cursuri/deletelike`,
         {
           id: id,
           userId: userId,

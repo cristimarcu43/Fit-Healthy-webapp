@@ -13,7 +13,7 @@ const Users = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          process.env.REACT_APP_BACKEND_URL + `/utilizatori`
+          process.env.REACT_APP_ASSET_URL + `/api/utilizatori`
         );
         setLoadedUsers(response.data.utilizatori);
         setIsLoading(false);

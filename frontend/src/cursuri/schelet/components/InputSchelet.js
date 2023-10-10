@@ -54,7 +54,7 @@ const InputSchelet = () => {
       formData.append("descriere", formState.inputs.descriere.value);
       formData.append("image", formState.inputs.image.value);
       await sendRequest(
-        process.env.REACT_APP_BACKEND_URL + `/cursuri/createcurs `,
+        process.env.REACT_APP_ASSET_URL + `/api/cursuri/createcurs `,
         "POST",
         formData
       );

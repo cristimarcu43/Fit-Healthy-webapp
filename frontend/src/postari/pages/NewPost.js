@@ -54,7 +54,7 @@ const NewPost = () => {
       formData.append("image", formState.inputs.image.value);
 
       await axios.post(
-        process.env.REACT_APP_BACKEND_URL + `/postari`,
+        process.env.REACT_APP_ASSET_URL + `/api/postari`,
         formData,
         {
           headers: {

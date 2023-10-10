@@ -16,7 +16,7 @@ const UserPosts = () => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get(
-          process.env.REACT_APP_BACKEND_URL + `/postari/user/${userId}`
+          process.env.REACT_APP_ASSET_URL + `/api/postari/user/${userId}`
         );
         setLoadedPosts(response.data.postari);
         setIsLoading(false);

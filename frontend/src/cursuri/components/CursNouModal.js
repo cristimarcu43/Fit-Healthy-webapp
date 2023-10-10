@@ -27,7 +27,7 @@ export default function CursNouModal({ open, setOpen }) {
       formData.append("titlu", titlu);
       formData.append("image", formState.inputs.image.value);
       const res = await axios.post(
-        process.env.REACT_APP_BACKEND_URL + `/cursuri/createcurs`,
+        process.env.REACT_APP_ASSET_URL + `/api/cursuri/createcurs`,
         formData,
         {
           headers: {

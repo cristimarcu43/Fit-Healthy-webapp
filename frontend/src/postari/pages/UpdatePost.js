@@ -42,7 +42,7 @@ const UpdatePost = () => {
     const fetchPost = async () => {
       try {
         const responseData = await sendRequest(
-          process.env.REACT_APP_BACKEND_URL + `/postari/${postId}`
+          process.env.REACT_APP_ASSET_URL + `/api/postari/${postId}`
         );
         setLoadedPost(responseData.postare);
         setFormData(
@@ -68,7 +68,7 @@ const UpdatePost = () => {
 
     try {
       await sendRequest(
-        process.env.REACT_APP_BACKEND_URL + `/postari/${postId}`,
+        process.env.REACT_APP_ASSET_URL + `/api/postari/${postId}`,
         "PATCH",
         JSON.stringify({
           title: formState.inputs.title.value,

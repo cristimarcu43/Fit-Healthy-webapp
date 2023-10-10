@@ -25,7 +25,7 @@ const PostItem = (props) => {
 
     try {
       await sendRequest(
-        process.env.REACT_APP_BACKEND_URL + `/postari/${props.id}`,
+        process.env.REACT_APP_ASSET_URL + `/api/postari/${props.id}`,
         "DELETE",
         null,
         {

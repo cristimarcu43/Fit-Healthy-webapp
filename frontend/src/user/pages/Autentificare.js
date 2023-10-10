@@ -73,7 +73,7 @@ const Autentificare = () => {
     if (isLoginMode) {
       try {
         const responseData = await sendRequest(
-          process.env.REACT_APP_BACKEND_URL + `/utilizatori/login`,
+          process.env.REACT_APP_ASSET_URL + `/api/utilizatori/login`,
           "POST",
           JSON.stringify({
             email: formState.inputs.email.value,
@@ -99,7 +99,7 @@ const Autentificare = () => {
         formData.append("password", formState.inputs.password.value);
         formData.append("image", formState.inputs.image.value);
         const responseData = await sendRequest(
-          process.env.REACT_APP_BACKEND_URL + `/utilizatori/signup`,
+          process.env.REACT_APP_ASSET_URL + `/api/utilizatori/signup`,
           "POST",
           formData
         );
