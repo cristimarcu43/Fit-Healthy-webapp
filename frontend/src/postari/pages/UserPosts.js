@@ -42,7 +42,7 @@ const UserPosts = () => {
     <React.Fragment>
       <ErrorModal error={error} onClear={clearError} />
       {isLoading && <LoadingSpinner />}
-      {!isLoading && loadedPosts.length > 0 && (
+      {!isLoading && loadedPosts.length >= 0 && (
         <PostList items={loadedPosts} onDeletePost={postDeleteHandler} />
       )}
     </React.Fragment>
