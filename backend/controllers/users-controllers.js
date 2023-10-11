@@ -142,7 +142,7 @@ const login = async (req, res, next) => {
       { expiresIn: "1h" }
     );
   } catch (err) {
-    const error = new HttpError("logarea contului nereusita.", 500);
+    const error = new HttpError("logarea contului nereusita", 500);
     return next(error);
   }
 

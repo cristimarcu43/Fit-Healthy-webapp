@@ -3,6 +3,6 @@
     "DB_USER": "applicenta",
     "DB_PASSWORD": "marcu43",
     "DB_NAME": "app",
-    "jWT_KEY": "secret"
+    "JWT_KEY": "secret"
   }
 }
