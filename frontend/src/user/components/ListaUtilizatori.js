@@ -11,7 +11,7 @@ const ListaUtilizatori = (props) => {
   }
 
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 list-none">
       {props.items.map((user) => {
         return (
           <ItemUtilizator

@@ -40,7 +40,7 @@ const UserPosts = () => {
 
   return (
     <React.Fragment>
-      <ErrorModal error={error} onClear={clearError} />
+      {/* <ErrorModal error={error} onClear={clearError} /> */}
       {isLoading && <LoadingSpinner />}
       {!isLoading && loadedPosts.length >= 0 && (
         <PostList items={loadedPosts} onDeletePost={postDeleteHandler} />

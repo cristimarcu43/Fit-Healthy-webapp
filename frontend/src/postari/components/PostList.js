@@ -6,13 +6,13 @@ const PostList = (props) => {
   if (props.items.length === 0) {
     return (
       <div className="text-center">
-        <h2 className=" text-3xl p-6">Nu exista postari. Poate creezi una?</h2>
-        <button
+        <h2 className=" text-3xl p-6">Nu exista postari. </h2>
+        {/* <button
           className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
           to="/postari/creare"
         >
           CREAZA
-        </button>
+        </button> */}
       </div>
     );
   }
